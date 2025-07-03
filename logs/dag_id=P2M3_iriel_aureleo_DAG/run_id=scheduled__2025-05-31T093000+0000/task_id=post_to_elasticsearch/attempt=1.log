@@ -1,0 +1,34 @@
+[2025-06-07T09:11:02.250+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: P2M3_iriel_aureleo_DAG.post_to_elasticsearch scheduled__2025-05-31T09:30:00+00:00 [queued]>
+[2025-06-07T09:11:02.508+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: P2M3_iriel_aureleo_DAG.post_to_elasticsearch scheduled__2025-05-31T09:30:00+00:00 [queued]>
+[2025-06-07T09:11:02.524+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-07T09:11:02.543+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 1
+[2025-06-07T09:11:02.578+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-06-07T09:11:02.924+0000] {taskinstance.py:1389} INFO - Executing <Task(_PythonDecoratedOperator): post_to_elasticsearch> on 2025-05-31 09:30:00+00:00
+[2025-06-07T09:11:03.371+0000] {standard_task_runner.py:52} INFO - Started process 7556 to run task
+[2025-06-07T09:11:03.493+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'P2M3_iriel_aureleo_DAG', 'post_to_elasticsearch', 'scheduled__2025-05-31T09:30:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_iriel_aureleo_DAG.py', '--cfg-path', '/tmp/tmp44ymmlxz', '--error-file', '/tmp/tmpomgk7cuc']
+[2025-06-07T09:11:03.661+0000] {standard_task_runner.py:80} INFO - Job 19: Subtask post_to_elasticsearch
+[2025-06-07T09:11:13.214+0000] {task_command.py:371} INFO - Running <TaskInstance: P2M3_iriel_aureleo_DAG.post_to_elasticsearch scheduled__2025-05-31T09:30:00+00:00 [running]> on host 39d263693a13
+[2025-06-07T09:11:16.939+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Iriel Aureleo
+AIRFLOW_CTX_DAG_ID=P2M3_iriel_aureleo_DAG
+AIRFLOW_CTX_TASK_ID=post_to_elasticsearch
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-31T09:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-31T09:30:00+00:00
+[2025-06-07T09:11:31.926+0000] {base.py:271} INFO - HEAD http://elasticsearch:9200/p2m3_iriel_aureleo [status:200 request:4.913s]
+[2025-06-07T09:12:13.512+0000] {base.py:271} INFO - DELETE http://elasticsearch:9200/p2m3_iriel_aureleo [status:200 request:41.505s]
+[2025-06-07T09:12:13.537+0000] {logging_mixin.py:115} INFO - Index lama dihapus
+[2025-06-07T09:12:13.912+0000] {logging_mixin.py:115} INFO - Jumlah record yang akan dikirim: 1470
+[2025-06-07T09:12:45.876+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:31.317s]
+[2025-06-07T09:12:46.865+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.896s]
+[2025-06-07T09:12:47.123+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.175s]
+[2025-06-07T09:12:48.032+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.882s]
+[2025-06-07T09:12:48.982+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.818s]
+[2025-06-07T09:12:49.659+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.644s]
+[2025-06-07T09:12:49.677+0000] {logging_mixin.py:115} INFO - Data berhasil dikirim ke Elasticsearch
+[2025-06-07T09:12:49.759+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-06-07T09:12:52.451+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=P2M3_iriel_aureleo_DAG, task_id=post_to_elasticsearch, execution_date=20250531T093000, start_date=20250607T091102, end_date=20250607T091252
+[2025-06-07T09:12:57.104+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-06-07T09:13:00.750+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

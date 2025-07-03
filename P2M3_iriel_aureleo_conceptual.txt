@@ -1,0 +1,49 @@
+Conceptual Problems
+
+1. Jelaskan apa yang dimaksud dengan NoSQL menggunakan pemahaman yang kalian ketahui!
+    
+    NoSQL menurut saya adalah jenis sistem basis data yang tidak mengikuti struktur tabel relasional seperti pada SQL. 
+    Kalau di SQL kita harus tentukan skema atau struktur tabel dari awal (kolom apa saja, jenis datanya apa), di NoSQL lebih fleksibel. 
+    Kita bisa menyimpan data dalam bentuk dokumen (seperti JSON), key-value, kolom lebar, atau graph, tergantung jenis NoSQL-nya. 
+    Ini cocok untuk data yang tidak terstruktur atau terus berkembang, misalnya data media sosial, sensor IoT, log aktivitas pengguna, dan sebagainya.
+
+    Selain itu, NoSQL juga unggul dalam hal skalabilitas horizontal, jadi kalau datanya makin besar, kita tinggal tambah server (scale out), 
+    bukan upgrade 1 server (scale up) seperti di SQL. Jadi intinya, NoSQL merupakan pilihan yang bagus jika butuh kecepatan, 
+    fleksibilitas struktur data, dan volume data yang besar, terutama buat aplikasi modern yang dinamis.
+
+2. Jelaskan kapan harus menggunakan NoSQL dan Relational Database Management System!
+    
+    NoSQL sangat cocok untuk kasus di mana struktur data tidak jelas atau berubah-ubah, misalnya data dari API, data log user, data media sosial, dan lain-lain. 
+    NoSQL juga pas kalau kita butuh performa tinggi dan bisa scale out ke banyak server, seperti sistem distribusi besar, microservices, atau aplikasi real-time.
+
+    Sedangkan jika kita punya data yang terstruktur rapi, dan ada hubungan antar tabel (misalnya data pegawai dan divisi, transaksi dan customer), 
+    maka lebih cocok pakai RDBMS seperti MySQL atau PostgreSQL. Apalagi kalau transaksinya butuh keakuratan tinggi, 
+    seperti sistem perbankan atau inventory, di mana relasi antar tabel harus konsisten.
+
+    Jadi :
+    - NoSQL cocok untuk data besar, dinamis, tidak selalu terstruktur, dan performa tinggi.
+    - RDBMS cocok untuk data terstruktur, hubungan antar entitas jelas, dan butuh konsistensi tinggi.
+
+3. Sebutkan contoh 2 tools/platform NoSQL selain ElasticSearch beserta keunggulan tools/platform tersebut !
+
+    - MongoDB : mudah digunakan, format datanya mirip JSON, cocok buat data yang fleksibel dan cepat berubah.
+
+    - Redis : super cepat, cocok untuk cache data, session storage, dan real-time analytics.
+
+4. Jelaskan apa yang Anda ketahui dari Airflow menggunakan pemahaman dan bahasa Anda sendiri !
+
+    Airflow merupakan alat buat menjalankan alur kerja (workflow) secara otomatis. 
+    Misalnya kita punya proses ambil data, cleaning data, dan kirim ke tempat lain, semua itu bisa dijalankan otomatis dan terjadwal dengan Airflow. 
+    Kita cukup buat DAG (semacam skenario kerja), lalu Airflow yang akan eksekusi task-task itu satu per satu sesuai urutan dan waktu yang kita atur.
+
+5. Jelaskan apa yang Anda ketahui dari Great Expectations menggunakan pemahaman dan bahasa Anda sendiri !
+
+    Great Expectations merupakan alat untuk mengecek kualitas data yang seperti pengawas dalam  membantu memastikan data yang kita punya sesuai harapan. 
+    Misalnya kolom umur harus angka dan tidak boleh kosong bisa dicek otomatis. 
+    Sangat berguna jika kita kerja di project data pipeline agar hasil analisis tidak salah karena data yang kotor atau aneh.
+
+6. Jelaskan apa yang Anda ketahui dari Batch Processing menggunakan pemahaman dan bahasa Anda sendiri (Definisi, Contoh Kasus Penggunaan, Tools, dll) !
+
+    Batch Processing adalah metode memproses data dalam jumlah besar sekaligus, biasanya dijalankan secara terjadwal (misalnya setiap malam). 
+    Contohnya: menghitung total penjualan harian, atau proses ETL mingguan. Tools yang sering dipakai: Apache Airflow, Spark, atau bahkan Python script biasa dengan scheduler seperti cron. 
+    Cocok untuk proses yang tidak butuh real-time.
